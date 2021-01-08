@@ -1,0 +1,37 @@
+{% extends 'student_marks/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+<div class="flex-center flex-column">
+    <h1 id="h">Leaderboard</h1>
+    <table id="keywords" style="width:100%">
+        <thead>
+            <tr>
+                <th>Roll No.</th>
+                <th>Name</th>
+                <th>Maths</th>
+                <th>Physics</th>
+                <th>Chemistry</th>
+                <th>Total</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mark in marks_list %}
+                <tr>
+                    <td>{{mark.rollno}}</td>
+                    <td>{{mark.name}}</td>
+                    <td>{{mark.maths}}</td>
+                    <td>{{mark.physics}}</td>
+                    <td>{{mark.chemistry}}</td>
+                    <td>{{mark.total}}</td>
+                    <td>{{mark.percentage}}%</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a id="b" class="btn" href="{% url 'home' %}">Go Home</a>
+</div>
+
+
+{% endblock %}

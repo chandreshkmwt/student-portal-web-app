@@ -1,0 +1,12 @@
+{% extends 'student_marks/base.html' %}
+
+{% block content %}
+    <div class="flex-center flex-column">
+        <h1>Success</h1>
+        <h2>Your calculated total: {{ marks.total }}</h2>
+        <h2>Your calculated percentage: {{ marks.percentage }}%</h2>
+        <a class="btn" href="{% url 'home' %}">Go Home</a>
+    </div>
+    
+    
+{% endblock %}

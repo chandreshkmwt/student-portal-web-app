@@ -1,0 +1,10 @@
+{% extends 'student_marks/base.html' %}
+
+{% block content %}
+    <div class="flex-center flex-column">
+        <h1>Welcome To Student Portal</h1>
+        <a class="btn" href="{% url 'enter_marks' %}">Enter Marks</a>
+        <a class="btn" href="{% url 'leaderboard' %}">View Leaderboard</a>
+    </div>
+    
+{% endblock %}
